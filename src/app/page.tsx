@@ -10,7 +10,6 @@ const projects = [
 export default function HomePage() {
   return (
     <div className="flex flex-col space-y-3">
-      {/* <p>Soon&trade;</p> */}
       {projects.map((project) => {
         if (!!project?.href) {
           return (

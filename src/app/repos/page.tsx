@@ -10,12 +10,11 @@ const repos = [
 export default function ReposPage() {
   return (
     <div className="ml-[50px] flex flex-col gap-2">
-      <p>Soon&trade;</p>
-      {/* {repos.map((repo) => ( */}
-      {/*   <a key={repo.label} href={repo.href} target="_blank"> */}
-      {/*     {repo.label} */}
-      {/*   </a> */}
-      {/* ))} */}
+      {repos.map((repo) => (
+        <a key={repo.label} href={repo.href} target="_blank">
+          {repo.label}
+        </a>
+      ))}
     </div>
   );
 }
