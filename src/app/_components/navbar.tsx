@@ -16,10 +16,18 @@ export function Navbar() {
     <div className="absolute left-4 top-4 flex space-x-3">
       {navigation.map((nav) => {
         if (pathname === nav.href) {
-          return <p className="font-semibold text-primary">{nav.label}</p>;
+          return (
+            <p key={nav.label} className="font-semibold text-primary">
+              {nav.label}
+            </p>
+          );
         }
 
-        return <Link href={nav.href}>{nav.label}</Link>;
+        return (
+          <Link key={nav.label} href={nav.href}>
+            {nav.label}
+          </Link>
+        );
       })}
     </div>
   );
