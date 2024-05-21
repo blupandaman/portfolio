@@ -1,8 +1,12 @@
 import Link from "next/link";
 
 const repos = [
-  { label: "Repo 1", href: "#" },
-  { label: "Repo 2", href: "#" },
+  { label: "Blu Portfolio", href: "https://github.com/blupandaman/portfolio" },
+  {
+    label: "Tapioca Genesis Countdown",
+    href: "https://github.com/blupandaman/tapioca-countdown",
+    liveHref: "https://tapioca.blupm.dev",
+  },
 ];
 
 export default function ReposPage() {
@@ -15,11 +19,12 @@ export default function ReposPage() {
       </div>
 
       <div className="ml-[50px] flex flex-col gap-2">
-        {repos.map((repo) => (
-          <a key={repo.label} href={repo.href} target="_blank">
-            {repo.label}
-          </a>
-        ))}
+        <p>Soon&trade;</p>
+        {/* {repos.map((repo) => ( */}
+        {/*   <a key={repo.label} href={repo.href} target="_blank"> */}
+        {/*     {repo.label} */}
+        {/*   </a> */}
+        {/* ))} */}
       </div>
     </div>
   );

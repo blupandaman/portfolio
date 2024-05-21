@@ -47,7 +47,7 @@ export default function RootLayout({
 
           <div className="absolute bottom-4 right-4 space-y-3 text-right text-primary-foreground">
             <Link href="mailto:blupandaman@pm.me">blupandaman@pm.me</Link>
-            <p>Fullstack Web3 Dev</p>
+            <p>Web3 Fullstack Dev</p>
           </div>
 
           {children}
