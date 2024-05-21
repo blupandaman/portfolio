@@ -4,6 +4,7 @@ import { GeistSans } from "geist/font/sans";
 import Image from "next/image";
 import Link from "next/link";
 import imageBluLogo from "@/images/blu-logo.png";
+import { Navbar } from "./_components/navbar";
 
 export const metadata = {
   title: "Blu | Fullstack Web3 Dev",
@@ -50,7 +51,9 @@ export default function RootLayout({
             <p>Web3 Fullstack Dev</p>
           </div>
 
-          {children}
+          <Navbar />
+
+          <div className="absolute left-4 top-11 space-y-3">{children}</div>
         </main>
       </body>
     </html>
