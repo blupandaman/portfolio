@@ -7,7 +7,7 @@ import imageBluLogo from "@/images/blu-logo.png";
 import { Navbar } from "./_components/navbar";
 
 export const metadata = {
-  title: "Blu | Fullstack Web3 Dev",
+  title: "Blu | Web3 fullstack dev",
   description: "Portfolio for Blu | @Blupandaman.",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
@@ -48,7 +48,7 @@ export default function RootLayout({
 
           <div className="absolute bottom-4 right-4 space-y-3 text-right text-primary-foreground">
             <Link href="mailto:blupandaman@pm.me">blupandaman@pm.me</Link>
-            <p>Web3 Fullstack Dev</p>
+            <p>Web3 fullstack dev</p>
           </div>
 
           <Navbar />
