@@ -8,7 +8,7 @@ export function MeshBackground() {
 
   useEffect(() => {
     gradient.initGradient("#gradient-canvas");
-  }, []);
+  }, [gradient]);
 
   return (
     <>
