@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
       <body>
-        <main className="relative flex h-[100svh] flex-col p-4 leading-none text-gray-700">
+        <main className="relative flex h-[100svh] flex-col p-4 leading-none text-gray-800">
           <MeshBackground />
 
           <div className="absolute right-4 top-4 z-50 space-x-3">
