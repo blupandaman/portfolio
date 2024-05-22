@@ -26,10 +26,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
       <body>
-        <main className="relative flex h-screen flex-col p-4 leading-none text-gray-700">
+        <main className="relative flex h-[100svh] flex-col p-4 leading-none text-gray-700">
           <MeshBackground />
 
-          <div className="absolute right-4 top-4 space-x-3">
+          <div className="absolute right-4 top-4 z-50 space-x-3">
             {socials.map((social) => (
               <a key={social.label} href={social.href} target="_blank">
                 {social.label}
@@ -45,18 +45,20 @@ export default function RootLayout({
             />
           </div>
 
-          <div className="absolute bottom-4 left-4 text-primary-foreground">
+          <div className="absolute bottom-4 left-4 z-50 text-primary-foreground">
             <p>Blu | @blupandaman</p>
           </div>
 
-          <div className="absolute bottom-4 right-4 space-y-3 text-right text-primary-foreground">
+          <div className="absolute bottom-4 right-4 z-50 space-y-3 text-right text-primary-foreground">
             <Link href="mailto:blupandaman@pm.me">blupandaman@pm.me</Link>
             <p>Web3 fullstack dev</p>
           </div>
 
           <Navbar />
 
-          <div className="absolute left-4 top-11 space-y-3">{children}</div>
+          <div className="absolute left-4 top-11 z-50 space-y-3">
+            {children}
+          </div>
         </main>
       </body>
     </html>
