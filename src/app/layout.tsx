@@ -3,9 +3,9 @@ import "@/styles/globals.css";
 import { GeistSans } from "geist/font/sans";
 import Image from "next/image";
 import Link from "next/link";
-import imageBluLogo from "@/images/blu-logo.png";
 import { Navbar } from "./_components/navbar";
 import { MeshBackground } from "./_components/mesh-background";
+import imageBluLogo from "@/images/blupanda-logo.png";
 
 export const metadata = {
   title: "Blu | Web3 fullstack dev",
@@ -37,7 +37,7 @@ export default function RootLayout({
             ))}
           </div>
 
-          <div className="container z-50 flex flex-1 items-center justify-center mix-blend-darken">
+          <div className="container z-50 flex flex-1 items-center justify-center">
             <Image
               src={imageBluLogo}
               alt="Blu panda logo"
