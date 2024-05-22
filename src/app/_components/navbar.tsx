@@ -17,7 +17,7 @@ export function Navbar() {
       {navigation.map((nav) => {
         if (pathname === nav.href) {
           return (
-            <p key={nav.label} className="font-semibold text-primary">
+            <p key={nav.label} className="underline underline-offset-4">
               {nav.label}
             </p>
           );

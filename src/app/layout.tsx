@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import imageBluLogo from "@/images/blu-logo.png";
 import { Navbar } from "./_components/navbar";
+import { MeshBackground } from "./_components/mesh-background";
 
 export const metadata = {
   title: "Blu | Web3 fullstack dev",
@@ -25,7 +26,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
       <body>
-        <main className="relative flex h-screen flex-col bg-gradient-to-b from-white from-40% to-primary p-4 leading-none">
+        <main className="relative flex h-screen flex-col p-4 leading-none text-gray-700">
+          <MeshBackground />
+
           <div className="absolute right-4 top-4 space-x-3">
             {socials.map((social) => (
               <a key={social.label} href={social.href} target="_blank">
@@ -34,7 +37,7 @@ export default function RootLayout({
             ))}
           </div>
 
-          <div className="container flex flex-1 items-center justify-center">
+          <div className="container z-50 flex flex-1 items-center justify-center mix-blend-darken">
             <Image
               src={imageBluLogo}
               alt="Blu panda logo"
