@@ -4,11 +4,10 @@ import { useEffect } from "react";
 import { Gradient } from "whatamesh";
 
 export function MeshBackground() {
-  const gradient = new Gradient();
-
   useEffect(() => {
+    const gradient = new Gradient();
     gradient.initGradient("#gradient-canvas");
-  }, [gradient]);
+  }, []);
 
   return (
     <>
