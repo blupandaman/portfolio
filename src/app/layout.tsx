@@ -9,8 +9,9 @@ import imageBluLogo from "@/images/blupanda-logo.png";
 
 export const metadata = {
   title: "Blu | @blupandaman",
-  description: "Portfolio for Blu | @blupandaman | Web3 fullstack dev.",
+  description: "Portfolio for Blu - @blupandaman - Web3 fullstack dev.",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
+  metadataBase: new URL("https://blupm.dev"),
 };
 
 const socials = [
