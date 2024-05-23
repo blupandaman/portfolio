@@ -8,8 +8,8 @@ import { MeshBackground } from "./_components/mesh-background";
 import imageBluLogo from "@/images/blupanda-logo.png";
 
 export const metadata = {
-  title: "Blu | Web3 fullstack dev",
-  description: "Portfolio for Blu | @Blupandaman.",
+  title: "Blu | @blupandaman",
+  description: "Portfolio for Blu | @blupandaman | Web3 fullstack dev.",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
