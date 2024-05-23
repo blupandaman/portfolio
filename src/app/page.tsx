@@ -1,7 +1,7 @@
 const projects = [
+  { label: "Speak NFT", href: "https://www.playspeak.xyz" },
   { label: "Mochi Circle", href: "https://www.mochicircle.xyz" },
   { label: "Autistic Waterfowl Group", href: "https://www.ducks.capital" },
-  { label: "Speak NFT", href: "https://www.playspeak.xyz" },
   { label: "Tekka", href: "https://www.friendtekka.xyz" },
   { label: "Saintbot", href: "https://app.saintbot.io" },
   { label: "Arena Deathmatch", href: "https://www.arenadm.io" },
@@ -11,7 +11,7 @@ const projects = [
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col space-y-3">
+    <div className="flex flex-1 flex-wrap justify-between gap-4 sm:flex-col sm:justify-normal sm:gap-3">
       {projects.map((project) => {
         if (!!project?.href) {
           return (

@@ -25,11 +25,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
-      <body>
-        <main className="relative flex h-[100svh] flex-col p-4 leading-none text-gray-800">
+      <body suppressHydrationWarning>
+        <main className="relative flex h-[100svh] flex-col overflow-x-hidden p-4 leading-none text-gray-800">
           <MeshBackground />
 
-          <div className="absolute right-4 top-4 z-50 space-x-3">
+          <div className="absolute right-4 top-4 z-50 space-x-4 sm:space-x-3">
             {socials.map((social) => (
               <a key={social.label} href={social.href} target="_blank">
                 {social.label}
@@ -37,11 +37,12 @@ export default function RootLayout({
             ))}
           </div>
 
-          <div className="container z-50 flex flex-1 items-center justify-center">
+          <div className="container z-10 flex flex-1 items-center justify-center">
             <Image
               src={imageBluLogo}
               alt="Blu panda logo"
               className="max-w-[200px]"
+              priority
             />
           </div>
 
@@ -49,14 +50,14 @@ export default function RootLayout({
             <p>Blu | @blupandaman</p>
           </div>
 
-          <div className="absolute bottom-4 right-4 z-50 space-y-3 text-right text-primary-foreground">
+          <div className="absolute bottom-4 right-4 z-50 space-y-4 text-right text-primary-foreground sm:space-y-3">
             <Link href="mailto:blupandaman@pm.me">blupandaman@pm.me</Link>
             <p>Web3 fullstack dev</p>
           </div>
 
           <Navbar />
 
-          <div className="absolute left-4 top-11 z-50 space-y-3">
+          <div className="absolute top-12 z-50 w-full pr-8 sm:top-11 sm:w-fit sm:pr-0">
             {children}
           </div>
         </main>
