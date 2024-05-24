@@ -17,7 +17,7 @@ export function Navbar() {
     <div className="absolute left-4 top-4 z-50 flex space-x-4 sm:space-x-3">
       {navigation.map((nav) => (
         <div key={nav.label} className="relative flex flex-col">
-          <Link href={nav.href} className="pb-2.5 sm:pb-2">
+          <Link href={nav.href} className="z-50 pb-2.5 sm:pb-2">
             {nav.label}
           </Link>
 
