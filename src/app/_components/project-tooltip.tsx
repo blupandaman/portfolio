@@ -7,7 +7,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { useState } from "react";
-import { projects } from "@/lib/projects";
+import { type projects } from "@/lib/projects";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 
