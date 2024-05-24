@@ -12,6 +12,6 @@ export const projects = [
   { label: "Tekka", href: "https://www.friendtekka.xyz" },
   { label: "Saintbot", href: "https://app.saintbot.io" },
   { label: "Arena Deathmatch", href: "https://www.arenadm.io" },
-  { label: "Isekai" },
+  { label: "Isekai", href: "https://www.isekai.money" },
   { label: "Blacky", href: "https://dapp.fantomblacky.io" },
 ];
