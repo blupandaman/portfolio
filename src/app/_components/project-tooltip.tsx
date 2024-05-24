@@ -25,7 +25,7 @@ export function ProjectTooltip(props: { project: (typeof projects)[0] }) {
           {props.project.label}
         </Link>
       </TooltipTrigger>
-      {(props.project.skills || props.project.image) && (
+      {(props.project?.skills ?? props.project?.image) && (
         <TooltipContent side="right" className="z-50 space-y-2 p-2">
           <Link
             href={props.project?.href ?? "#"}
