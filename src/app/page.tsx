@@ -1,5 +1,3 @@
-import { ProjectCard } from "./_components/project-card";
-
 const projects = [
   { label: "Speak NFT", href: "https://www.playspeak.xyz" },
   { label: "Mochi Circle", href: "https://www.mochicircle.xyz" },
@@ -13,21 +11,18 @@ const projects = [
 
 export default function HomePage() {
   return (
-    <>
-      <div className="flex flex-1 flex-wrap justify-between gap-4 sm:flex-col sm:justify-normal sm:gap-3">
-        {projects.map((project) => {
-          if (!!project?.href) {
-            return (
-              <a key={project.label} href={project.href} target="_blank">
-                {project.label}
-              </a>
-            );
-          }
+    <div className="flex flex-1 flex-wrap justify-between gap-4 sm:flex-col sm:justify-normal sm:gap-3">
+      {projects.map((project) => {
+        if (!!project?.href) {
+          return (
+            <a key={project.label} href={project.href} target="_blank">
+              {project.label}
+            </a>
+          );
+        }
 
-          return <p key={project.label}>{project.label}</p>;
-        })}
-      </div>
-      {/* <ProjectCard /> */}
-    </>
+        return <p key={project.label}>{project.label}</p>;
+      })}
+    </div>
   );
 }

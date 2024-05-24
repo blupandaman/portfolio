@@ -20,6 +20,7 @@ export function Navbar() {
           <Link href={nav.href} className="pb-2.5 sm:pb-2">
             {nav.label}
           </Link>
+
           {pathname === nav.href && (
             <motion.span
               layoutId="underline"

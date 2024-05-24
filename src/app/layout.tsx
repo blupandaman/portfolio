@@ -6,7 +6,6 @@ import Link from "next/link";
 import { Navbar } from "./_components/navbar";
 import { MeshBackground } from "./_components/mesh-background";
 import imageBluLogo from "@/images/blupanda-logo.png";
-import { ProjectCard } from "./_components/project-card";
 
 export const metadata = {
   title: "Blu | @blupandaman",
@@ -59,10 +58,8 @@ export default function RootLayout({
 
           <Navbar />
 
-          <div className="absolute left-0 top-0 z-50 mt-8 flex w-full flex-col gap-4 p-4 sm:mt-7 sm:w-fit sm:flex-row">
+          <div className="absolute left-0 top-0 z-50 mt-8 w-full p-4 sm:mt-7">
             {children}
-
-            <ProjectCard />
           </div>
         </main>
       </body>
