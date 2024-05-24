@@ -58,7 +58,7 @@ export default function RootLayout({
 
           <Navbar />
 
-          <div className="absolute left-0 top-0 z-40 mt-8 w-full p-4 sm:mt-7">
+          <div className="absolute left-0 top-0 z-30 mt-8 w-full p-4 sm:mt-7">
             {children}
           </div>
         </main>
