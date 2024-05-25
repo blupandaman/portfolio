@@ -7,7 +7,9 @@ export default function HomePage() {
     <TooltipProvider delayDuration={100}>
       <div className="flex flex-1 flex-wrap justify-between gap-4 sm:flex-col sm:justify-normal sm:gap-3">
         {projects.map((project) => (
-          <ProjectTooltip key={project.label} project={project} />
+          <div className="">
+            <ProjectTooltip key={project.label} project={project} />
+          </div>
         ))}
       </div>
     </TooltipProvider>
