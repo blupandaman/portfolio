@@ -27,14 +27,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
       <body suppressHydrationWarning>
-        <main className="relative flex h-[100svh] flex-col overflow-x-hidden p-4 leading-none text-gray-800">
+        <main className="relative flex h-[100svh] flex-col overflow-x-hidden p-4 leading-none text-gray-800 text-primary-foreground">
           <MeshBackground />
 
-          <div className="absolute right-4 top-4 z-30 space-x-4 sm:space-x-3">
+          <div className="absolute right-4 top-4 z-50 space-x-4 sm:space-x-3">
             {socials.map((social) => (
-              <Link key={social.label} href={social.href} target="_blank">
+              <a key={social.label} href={social.href} target="_blank">
                 {social.label}
-              </Link>
+              </a>
             ))}
           </div>
 
@@ -47,11 +47,11 @@ export default function RootLayout({
             />
           </div>
 
-          <div className="absolute bottom-4 left-4 z-40 text-primary-foreground">
+          <div className="absolute bottom-4 left-4 z-50">
             <p>Blu | @blupandaman</p>
           </div>
 
-          <div className="absolute bottom-4 right-4 z-40 space-y-4 text-right text-primary-foreground sm:space-y-3">
+          <div className="absolute bottom-4 right-4 z-50 space-y-4 text-right sm:space-y-3">
             <Link href="mailto:blupandaman@pm.me">blupandaman@pm.me</Link>
             <p>Web3 fullstack dev</p>
           </div>

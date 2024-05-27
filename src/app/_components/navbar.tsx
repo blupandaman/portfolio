@@ -24,7 +24,7 @@ export function Navbar() {
           {pathname === nav.href && (
             <motion.span
               layoutId="underline"
-              className="absolute bottom-0 h-1 w-full rounded-full bg-primary"
+              className="absolute bottom-0 h-1 w-full rounded-full bg-white"
               transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
             />
           )}
