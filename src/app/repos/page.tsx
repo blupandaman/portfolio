@@ -1,9 +1,13 @@
 const repos = [
-  { label: "Blu Portfolio", href: "https://github.com/blupandaman/portfolio" },
   {
     label: "Tapioca Genesis Countdown",
     href: "https://github.com/blupandaman/tapioca-countdown",
     liveHref: "https://tapioca.blupm.dev",
+  },
+  { label: "Blu Portfolio", href: "https://github.com/blupandaman/portfolio" },
+  {
+    label: "Web3 Auth Starter",
+    href: "https://github.com/blupandaman/web3-auth-starter",
   },
 ];
 
