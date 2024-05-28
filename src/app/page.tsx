@@ -11,6 +11,8 @@ import gifSpeak from "@/images/projects/speak-nft.gif";
 import imageMochi from "@/images/projects/mochi.png";
 import imageAwg from "@/images/projects/awg.png";
 import imageTekka from "@/images/projects/tekka.png";
+import imageSaintbot from "@/images/projects/saintbot.png";
+import imageArena from "@/images/projects/arena.png";
 
 type Project = {
   label: string;
@@ -53,8 +55,20 @@ const projects: Array<Project> = [
     description:
       "Set up a subgraph to keep track of transactions made on the Tekka friend.tech account. A cron job was used to pull the data from the subgraph and store it into the database.",
   },
-  { label: "Saintbot", href: "https://app.saintbot.io" },
-  { label: "Arena Deathmatch", href: "https://www.arenadm.io" },
+  {
+    label: "Saintbot",
+    href: "https://app.saintbot.io",
+    image: imageSaintbot,
+    tech: ["SIWE", "Thirdweb", "tRPC", "Postgres", "shadcn/ui"],
+    description:
+      "Initially built a dashboard for the project revenue per wallet, but later built the web based token deployer.",
+  },
+  {
+    label: "Arena Deathmatch",
+    href: "https://www.arenadm.io",
+    image: imageArena,
+    tech: ["Subgraph", "TanStack Query", "Tailwindcss", "DEX Screener API"],
+  },
   { label: "Isekai", href: "https://www.isekai.money" },
   { label: "Blacky", href: "https://dapp.fantomblacky.io" },
 ];
@@ -76,13 +90,13 @@ function ProjectContent(props: { project: (typeof projects)[0] }) {
         <Image
           src={props.project.image}
           alt={props.project.label}
-          className="h-auto w-72"
+          className="h-auto w-72 sm:w-96"
           priority
         />
       )}
 
       {props.project?.tech && props.project.tech.length > 0 && (
-        <div className="flex max-w-72 flex-wrap items-center gap-2">
+        <div className="flex max-w-72 flex-wrap items-center gap-2 sm:max-w-96">
           <p className="text-xs font-semibold">Tech used: </p>
           {props.project.tech.map((skill) => (
             <Badge className="bg-sky-700/70" key={skill}>
@@ -93,7 +107,9 @@ function ProjectContent(props: { project: (typeof projects)[0] }) {
       )}
 
       {props.project?.description && (
-        <p className="max-w-72 leading-tight">{props.project.description}</p>
+        <p className="max-w-72 leading-tight sm:max-w-96">
+          {props.project.description}
+        </p>
       )}
     </>
   );
@@ -110,7 +126,7 @@ export default function HomePage() {
               <PopoverContent
                 sideOffset={16}
                 side="right"
-                className="space-y-2 p-2"
+                className="space-y-3 p-3"
               >
                 <ProjectContent project={project} />
               </PopoverContent>
