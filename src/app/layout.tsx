@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
       <body suppressHydrationWarning>
-        <main className="relative flex h-[100svh] flex-col overflow-x-hidden p-4 leading-none text-gray-800 text-primary-foreground">
+        <main className="relative flex h-[100svh] flex-col overflow-x-hidden p-4 leading-none tracking-tight text-gray-800 text-primary-foreground">
           <MeshBackground />
 
           <div className="absolute right-4 top-4 z-50 space-x-4 sm:space-x-3">
@@ -47,18 +47,18 @@ export default function RootLayout({
             />
           </div>
 
-          <div className="absolute bottom-4 left-4 z-50">
+          <div className="absolute bottom-5 left-4 z-50">
             <p>Blu | @blupandaman</p>
           </div>
 
-          <div className="absolute bottom-4 right-4 z-50 space-y-4 text-right sm:space-y-3">
+          <div className="absolute bottom-5 right-4 z-50 space-y-4 text-right sm:space-y-3">
             <Link href="mailto:blupandaman@pm.me">blupandaman@pm.me</Link>
             <p>Web3 fullstack dev</p>
           </div>
 
           <Navbar />
 
-          <div className="absolute left-0 top-0 z-30 mt-8 w-full p-4 sm:mt-7">
+          <div className="absolute left-0 top-0 z-30 mt-8 w-full p-4">
             {children}
           </div>
         </main>

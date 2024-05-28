@@ -16,7 +16,7 @@ export function MeshBackground() {
         className="absolute left-0 top-0 -z-10 size-full"
         data-transition-in
       />
-      <div className="absolute left-0 top-0 z-0 size-full bg-primary/50" />
+      <div className="absolute left-0 top-0 z-0 size-full bg-primary/65" />
     </>
   );
 }
