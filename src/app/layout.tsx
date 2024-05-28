@@ -8,8 +8,8 @@ import { MeshBackground } from "./_components/mesh-background";
 import imageBluLogo from "@/images/blupanda-logo.png";
 
 export const metadata = {
-  title: "Blu | @blupandaman",
-  description: "Portfolio for Blu - @blupandaman - Web3 fullstack dev.",
+  title: "Blu | Web3 Fullstack Dev",
+  description: "Portfolio for Blu - @blupandaman - Web3 Fullstack Dev.",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
   metadataBase: new URL("https://blupm.dev"),
 };
@@ -53,7 +53,7 @@ export default function RootLayout({
 
           <div className="absolute bottom-5 right-4 z-50 space-y-4 text-right sm:space-y-3">
             <Link href="mailto:blupandaman@pm.me">blupandaman@pm.me</Link>
-            <p>Web3 fullstack dev</p>
+            <p>Web3 Fullstack Dev</p>
           </div>
 
           <Navbar />
