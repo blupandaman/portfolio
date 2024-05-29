@@ -15,6 +15,7 @@ import imageSaintbot from "@/images/projects/saintbot.png";
 import imageArena from "@/images/projects/arena.png";
 import imageIsekai from "@/images/projects/isekai.png";
 import imageBlacky from "@/images/projects/blacky.png";
+import { Fragment } from "react";
 
 type Project = {
   label: string;
@@ -143,7 +144,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-1 flex-wrap justify-between gap-4 sm:flex-col sm:justify-normal sm:gap-3">
       {projects.map((project) => (
-        <>
+        <Fragment key={project.label}>
           <div className="hidden sm:block">
             <Popover>
               <PopoverTrigger>{project.label}</PopoverTrigger>
@@ -169,7 +170,7 @@ export default function HomePage() {
               </PopoverContent>
             </Popover>
           </div>
-        </>
+        </Fragment>
       ))}
     </div>
   );

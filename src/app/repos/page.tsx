@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/popover";
 import gifPortfolio from "@/images/repos/portfolio.gif";
 import gifTapiocaCountdown from "@/images/repos/tapioca-countdown.gif";
+import { Fragment } from "react";
 
 type Repo = {
   label: string;
@@ -101,7 +102,7 @@ export default function RepoPage() {
     <div className="w-full pl-[53px] sm:pl-[50px]">
       <div className="flex flex-1 flex-wrap justify-between gap-4 sm:flex-col sm:justify-normal sm:gap-3">
         {repos.map((repo) => (
-          <>
+          <Fragment key={repo.label}>
             <div className="hidden sm:block">
               <Popover>
                 <PopoverTrigger>{repo.label}</PopoverTrigger>
@@ -127,7 +128,7 @@ export default function RepoPage() {
                 </PopoverContent>
               </Popover>
             </div>
-          </>
+          </Fragment>
         ))}
       </div>
     </div>
