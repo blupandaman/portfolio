@@ -97,7 +97,7 @@ const projects: Array<Project> = [
   },
 ];
 
-function ProjectContent(props: { project: (typeof projects)[0] }) {
+function ProjectContent(props: { project: Project }) {
   return (
     <>
       <div className="flex items-center">
