@@ -7,12 +7,14 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import gifSpeak from "@/images/projects/speak-nft.gif";
+import gifSpeak from "@/images/projects/speak.gif";
 import imageMochi from "@/images/projects/mochi.png";
 import imageAwg from "@/images/projects/awg.png";
 import imageTekka from "@/images/projects/tekka.png";
 import imageSaintbot from "@/images/projects/saintbot.png";
 import imageArena from "@/images/projects/arena.png";
+import imageIsekai from "@/images/projects/isekai.png";
+import imageBlacky from "@/images/projects/blacky.png";
 
 type Project = {
   label: string;
@@ -43,7 +45,7 @@ const projects: Array<Project> = [
     label: "Autistic Waterfowl Group",
     href: "https://www.ducks.capital",
     image: imageAwg,
-    tech: ["Next.js", "Tailwindcss", "Wagmi", "ConnectKit", "howler.js"],
+    tech: ["Next.js", "Tailwindcss", "Wagmi.sh", "ConnectKit", "howler.js"],
     description:
       "Made a site where users could connect their wallet, check if they were whitelisted, and mint an AWG NFT.",
   },
@@ -67,10 +69,32 @@ const projects: Array<Project> = [
     label: "Arena Deathmatch",
     href: "https://www.arenadm.io",
     image: imageArena,
-    tech: ["Subgraph", "TanStack Query", "Tailwindcss", "DEX Screener API"],
+    tech: [
+      "Subgraph",
+      "TanStack Query",
+      "Tailwindcss",
+      "DEX Screener API",
+      "Jotai",
+    ],
+    description:
+      "Pulled live data from a subgraph to show which wallets had the highest profit on a specific token pair.",
   },
-  { label: "Isekai", href: "https://www.isekai.money" },
-  { label: "Blacky", href: "https://dapp.fantomblacky.io" },
+  {
+    label: "Isekai",
+    href: "https://www.isekai.money",
+    image: imageIsekai,
+    tech: ["tRPC", "Viem", "shadcn/ui", "Tailwindcss", "Jotai"],
+    description:
+      "Developed a design system so that the frontend team working on the dashboard could move faster and have a consistent look accross all components.",
+  },
+  {
+    label: "Blacky",
+    href: "https://dapp.fantomblacky.io",
+    image: imageBlacky,
+    tech: ["Wagmi.sh", "TanStack Query", "DEX Screener API", "ConnectKit"],
+    description:
+      "Built a dashboard for the meme coin Blacky that kept track of token burns and other metrics. Additionaly, built a NFT minting page for their collection.",
+  },
 ];
 
 function ProjectContent(props: { project: (typeof projects)[0] }) {
@@ -90,14 +114,14 @@ function ProjectContent(props: { project: (typeof projects)[0] }) {
         <Image
           src={props.project.image}
           alt={props.project.label}
-          className="h-auto w-72 sm:w-96"
+          className="h-auto w-72 sm:w-[450px]"
           priority
         />
       )}
 
       {props.project?.tech && props.project.tech.length > 0 && (
-        <div className="flex max-w-72 flex-wrap items-center gap-2 sm:max-w-96">
-          <p className="text-xs font-semibold">Tech used: </p>
+        <div className="flex max-w-72 flex-wrap items-center gap-2 sm:max-w-[450px]">
+          <p className="text-xs font-semibold">Tech: </p>
           {props.project.tech.map((skill) => (
             <Badge className="bg-sky-700/70" key={skill}>
               {skill}
@@ -107,7 +131,7 @@ function ProjectContent(props: { project: (typeof projects)[0] }) {
       )}
 
       {props.project?.description && (
-        <p className="max-w-72 leading-tight sm:max-w-96">
+        <p className="max-w-72 leading-tight sm:max-w-[450px]">
           {props.project.description}
         </p>
       )}
