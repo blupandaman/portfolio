@@ -117,6 +117,7 @@ function ProjectContent(props: { project: Project }) {
           alt={props.project.label}
           className="h-auto w-72 sm:w-[450px]"
           priority
+          placeholder="blur"
         />
       )}
 

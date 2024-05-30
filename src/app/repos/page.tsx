@@ -78,6 +78,7 @@ function RepoContent(props: { repo: Repo }) {
           alt={props.repo.label}
           className="h-auto w-72 sm:w-[450px]"
           priority
+          placeholder="blur"
         />
       )}
 
