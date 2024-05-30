@@ -7,9 +7,10 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { Fragment } from "react";
 import gifPortfolio from "@/images/repos/portfolio.gif";
 import gifTapiocaCountdown from "@/images/repos/tapioca-countdown.gif";
-import { Fragment } from "react";
+import gifWeb3AuthStarter from "@/images/repos/web3-auth-starter.gif";
 
 type Repo = {
   label: string;
@@ -41,6 +42,19 @@ const repos: Array<Repo> = [
   {
     label: "Web3 Auth Starter",
     repoHref: "https://github.com/blupandaman/web3-auth-starter",
+    image: gifWeb3AuthStarter,
+    tech: [
+      "SIWE",
+      "NextAuth",
+      "ConnectKit",
+      "tRPC",
+      "Drizzle",
+      "Postgres",
+      "shadcn/ui",
+    ],
+    description:
+      "A Next.js starter repo that is set up with Drizzle + Postgres, NextAuth + SIWE, tRPC, and shadnc/ui.",
+    href: "https://web3-auth-starter.vercel.app",
   },
 ];
 
