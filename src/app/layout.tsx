@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Navbar } from "./_components/navbar";
 import { MeshBackground } from "./_components/mesh-background";
 import imageBluLogo from "@/images/blupanda-logo.png";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title: "Blu | Web3 Fullstack Dev",
@@ -62,6 +63,8 @@ export default function RootLayout({
             {children}
           </div>
         </main>
+
+        <Analytics />
       </body>
     </html>
   );
